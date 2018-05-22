@@ -1,0 +1,8 @@
+<view>
+<button bindtap="change">切换组件</button>
+<shengming id='shengming'>
+<view slot="befer">
+小组件
+</view>
+</shengming>
+</view>

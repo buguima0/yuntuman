@@ -1,0 +1,40 @@
+<form report-submit="true" bindsubmit="formSubmit">
+  <view class="binding-wrapper">
+    <view class="binding-logo">
+      <image src='../../售后服务.png'></image>
+    </view>
+    <view class="binding-form ">
+      <view class=" {{userBorderColor}} input ueser">
+        <text>账号</text>
+        <input maxlength="18" placeholder='请输入账号' bindinput='checkUser' value='{{username}}' type="text"></input>
+        <view class="icon" bindtap="clearUser">
+          <icon  size="20" type="clear"></icon>
+        </view>
+      </view>
+      <text class="warnword">{{userWarn}}</text>
+      <view class=" {{passwordBorderColor}} input password">
+        <text>密码</text>
+        <input maxlength="16"placeholder='请输入密码' bindinput='checkPassword' type="text" password="{{passwordShow}}"></input>
+        <view class="icon" bindtap='toggle'>
+                <icon  type='success' size="20"></icon>
+        </view>
+      </view>
+      <text class="warnword">{{passwordWarn}}</text>
+
+      <view class="binding">
+        <button form-type='submit' size="mini">绑定</button>
+      </view>
+    </view>
+  </view>
+</form>
+<view  class="model"wx:if="{{modelShow}}">
+<view class="masking"></view>
+  <view class="content">
+  <view  class="title">提示</view>
+    <view class="dsc" wx:if="{{passwordErorr}}">密码错误</view>
+    <view class="dsc" wx:if="{{userErorr}}">该用户不存在</view>
+    <view class="close-reminder"bindtap="hiddenReminder" >
+      确定
+    </view>
+  </view>
+</view>

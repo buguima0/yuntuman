@@ -1,0 +1,5 @@
+<!--pages/component/shengming.wxml-->
+<view>
+<view  wx:if='{{show}}'>显示组件</view>
+<slot name="befer"></slot>
+</view>

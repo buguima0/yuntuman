@@ -1,0 +1,40 @@
+<map style="width:{{screenW}}px;height:{{screenH-180}}px" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}"
+  bindregionchange="regionchange" show-location bindcontroltap="controltap"></map>
+
+<view class="equipment-detail">
+  <view class="detail-wrapper" wx:if="{{!menuShow}}">
+    <view class="detail-top">
+      <view class="detail-top-item" bindtap="upEquipment" wx:if="{{equipments.length>1}}">
+        <image src='/common/images/左箭头.png'></image>
+      </view>
+      <view class="detail-top-item">{{equipments[currentIndex].equipmentName}}</view>
+      <view class="detail-top-item" bindtap="downEquipment">
+        <image src='/common/images/箭头.png' wx:if="{{equipments.length>1}}"></image>
+      </view>
+    </view>
+    <view class="detail-middle">
+      <view class="detail-middle-item">
+        <view class="item-wrapper">
+          <text class="text"> 状态：</text> {{equipments[currentIndex].state}}</view>
+        <view class="item-wrapper">
+          <text class="text"> 速度：</text> {{equipments[currentIndex].speed}}</view>
+        <view class="item-wrapper">
+          <text class="text"> 定位：</text> 卫星定位</view>
+      </view>
+      <view class="detail-middle-item">
+        <text class="text"> 时间：</text> {{equipments[currentIndex].getLocationTime}}</view>
+      <view class="detail-middle-item">
+        <text class="text"> 地址：</text> {{equipments[currentIndex].address}}</view>
+    </view>
+    <view class="detail-bottom" bindtap="showMenu">更多...</view>
+
+  </view>
+  <view class="menu" wx:if="{{menuShow}}">
+    <view class="tabs">
+      <view class="tab-item"><view class="icon iconfont icon-ticket"></view>设备信息</view>
+      <view class="tab-item"><view class="icon iconfont icon-ticket"></view>历史轨迹</view>
+      <view class="tab-item"><view class="icon iconfont icon-ticket"></view>里程统计</view>
+    </view>
+    <view class="close" bindtap='closeMenu'><icon type="cancel" >a</icon></view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+{
+  "pages": [
+        "pages/libs-/libs",
+    "pages/index/index",
+    "pages/logs/logs"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath":   "pages/index/index",
+      "text": "首页",
+      "iconPath": "./风控平台.png"
+    },{
+      "pagePath": "pages/libs-/libs",
+      "text": "第二页",
+      "iconPath": "./定位终端.png"
+    }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+.equipment-detail{
+  height: 360rpx;
+  width: 100%;
+  overflow: hidden;
+  font-size: 28rpx;
+  padding: 20rpx ;
+  box-sizing: border-box;
+  border-top: 1rpx solid #999;
+}
+.detail-top{
+  display: flex;
+}
+.detail-top-item{
+  flex: 1;
+  line-height: 60rpx;
+  font-weight: bolder;
+}
+.detail-top-item:last-child{
+text-align: right
+}
+.detail-top-item image{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.detail-middle{
+  border-bottom: 1rpx solid #ccc;
+  padding-bottom: 20rpx;
+}
+.detail-middle-item{
+  line-height: 50rpx;
+}
+.detail-middle-item{
+  display: flex
+}
+.item-wrapper{
+  flex: 1;
+  display: inline-block;
+}
+ text{
+  color: #ccc
+}
+.detail-bottom{
+  text-align: center;
+  color: #ccc;
+  line-height: 100rpx;
+}
+.close{
+  width: 100%;
+  margin-top:120rpx;
+  text-align: center;
+}
+.close icon{
+  width: 40rpx;
+  height: 40rpx;
+}
+.icon{
+  margin:0 auto;
+  font-size: 100rpx;
+  line-height: 100rpx;
+  width: 100rpx;
+  color: red;
+  border: 1rpx solid #999;
+  border-radius: 50%;
+}
+.menu{
+  width: 100%;
+  padding: 40rpx;
+}
+.tabs{
+  display: flex;
+  width: 100%;
+}
+.tab-item{
+  flex: 1;
+  height: 100rpx;
+  text-align: center;
+}
