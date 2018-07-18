@@ -1,0 +1,56 @@
+<view>
+  <view class="progress-wrapper">
+    <!-- <view class="item-wrapper">
+      <view class="icon-wrapper">
+        <view class=" icon iconfont icon-fabu"></view>
+        发布
+      </view>
+      <view class="time">
+       {{currentIndent.CreatedTime}}
+      </view>
+    </view>
+    <view class="icon-xian"></view> -->
+    <view class="item-wrapper">
+      <view class="icon-wrapper">
+        <view class=" icon iconfont icon-zhipaisiji"></view>
+        指派
+      </view>
+      <view class="time">
+        {{currentIndent.AssignedTime}}
+      </view>
+    </view>
+    <view class="icon-xian"></view>
+    <view class="item-wrapper">
+      <view class="icon-wrapper" wx:if="{{currentIndent.Status!==1}}" >
+           <view class=" icon iconfont icon-jiedan" ></view>
+       接单
+      </view>
+       <view class="icon-wrapper" wx:if="{{currentIndent.Status===1}}" >
+           <view class=" icon iconfont icon-jiedan" ></view>
+      待接单
+      </view>
+      <view class="time" wx:if="{{currentIndent.Status!==1}}" >
+               {{currentIndent.ReceiptTime}}
+      </view>
+    </view>
+    <view class="icon-xian" wx:if="{{currentIndent.Status===2}}" ></view>
+    <view class="item-wrapper" wx:if="{{currentIndent.Status===2}}">
+   
+      <view class="icon-wrapper">
+        <view class=" icon iconfont icon-dengdai"></view>
+        待安装
+      </view>
+    </view>
+ <view class="icon-xian" wx:if="{{currentIndent.Status===3}}" ></view>
+    <view class="item-wrapper" wx:if="{{currentIndent.Status===3}}">
+
+      <view class="icon-wrapper">
+        <view class=" icon iconfont icon-wancheng"></view>
+        已完成
+      </view>
+      <view class="time">
+        {{currentIndent.CompleteTime}}
+      </view>
+    </view>
+  </view>
+</view>

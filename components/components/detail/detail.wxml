@@ -1,0 +1,25 @@
+<view class="indent-content">
+  <!-- <view class=" wrapper">
+    <view class="title top">工单进度</view>
+    <progress-detail currentIndent="{{currentIndent}}"></progress-detail>
+  </view>
+  <view class="middle ">
+    <view class="wait wrapper">
+      <view class="title" wx:if="{{dataStatus===1}}">
+        待安装设备
+      </view>
+       <view class="title" wx:if="{{dataStatus===2}}">
+        安装设备
+      </view>
+      <view class=" equipment-wrapper">
+        <view class="equipment-item" wx:for="{{currentIndent.TerTypes}}" wx:for-item="item" wx:key="itemName">
+          <view class="equipment-des"><text>设备型号:</text> {{item.equipmentType}}</view>
+          <view class="equipment-des">数量： {{item.equipmentNum}}台</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class="detail">
+    <indent-detail-component currentIndent="{{currentIndent}}" userInfo="{{userInfo}}"></indent-detail-component>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+/* components/forms/forms.wxss */
+@import './icon.wxss';
+
+.content-item {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  height: 100rpx;
+  margin-bottom: 4rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  position: relative;
+}
+
+.content-item-key {
+  flex: 0 0 200rpx;
+  color: #333;
+}
+
+.content-item-value {
+  flex: 1;
+  position: relative;
+}
+
+.icon-image {
+  position: absolute;
+  top: 50%;
+  right: 0rpx;
+  border-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  z-index: 2;
+  margin-top: -40rpx;
+}
+
+.input {
+  vertical-align: middle;
+  margin-top: 24rpx;
+  border-radius: 8rpx;
+}
+
+.picker {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: #b2b2b2;
+}
+
+.icon-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #b2b2b2;
+}
+
+.switch-wrapper {
+  flex: 0 0 160rpx;
+  position: relative;
+}
+
+.switch {
+  float: right;
+}
+
+.switch-key {
+  flex: 1 !important;
+}
+
+.title-icon {
+  font-size: 24rpx;
+  width: 30rpx;
+  color: #fe8080;
+}
+
+.btn-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #009fe8;
+}
+
+.btn {
+  width: 100%;
+  background: #009fe8;
+  color: #fff;
+}
+
+.input-picker {
+  position: absolute;
+  top: 0;
+  right: 30rpx;
+  width: 60rpx;
+  height: 100rpx;
+  z-index: 2;
+}

@@ -1,0 +1,8 @@
+<view class="openSetting" wx:if="{{showOpenSetting}}">
+  <view class="mark"></view>
+  <view class="content-wrapper">
+    <view class="title">用户未授权</view>
+    <view class="content">{{content}}</view>
+    <button class="btn"   open-type="openSetting" bindopensetting="hidden">确定</button>
+  </view>
+</view>

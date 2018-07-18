@@ -1,0 +1,132 @@
+/* components/list/list.wxss */
+@import './list-icons.wxss';
+
+.content-item {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  line-height: 100rpx;
+  position: relative;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.item-icon {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  color: #b2b2b2;
+}
+
+.icon-wrapper {
+  flex: 0 0 100rpx;
+  text-align: center;
+}
+
+.img {
+  vertical-align: middle;
+  width: 140rpx;
+  height: 140rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.title-wrapper {
+  box-sizing: border-box;
+}
+
+.editor-wrapper {
+  position: absolute;
+  bottom: 0rpx;
+  right: 160rpx;
+  font-size: 32rpx;
+  z-index: 2;
+}
+
+.editor-wrapper text {
+  display: inline-block;
+  color: #009fe8;
+  text-align: center;
+}
+
+.editor-wrapper text:nth-child(2) {
+  width: 20rpx;
+  color: #b2b2b2;
+}
+
+.toDetail {
+  position: absolute;
+  bottom: 0rpx;
+  right: 120rpx;
+  font-size: 32rpx;
+  color: #009fe8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  z-index: 2;
+}
+.authentication{
+  flex: 0 0 40rpx;
+  line-height: 40rpx;
+  width: 110rpx;
+  padding: 0 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  color: #b2b2b2;
+}
+.describes {
+  font-size: 26rpx;
+  padding: 0 30rpx;
+}
+.seeit{
+  line-height: 80rpx;
+}
+.car-bottom {
+  background: #fff;
+  width: 100%;
+  text-align: right;
+  border-top: 1rpx solid #ccc;
+}
+
+.state {
+  position: absolute;
+  right: 80rpx;
+  top: 0;
+  color: #ccc;
+  font-size: 28rpx;
+}
+
+.title {
+  box-sizing: border-box;
+  flex: 0 0 180rpx;
+  padding: 0 30rpx;
+  color: #333;
+}
+
+.stateleft {
+  position: absolute;
+  left: 200rpx;
+  top: 0;
+  color: #000;
+  font-size: 32rpx;
+}
+
+.stateright {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  color: #b2b2b2;
+  font-size: 32rpx;
+}
+
+.stateIcon {
+  top: 50%;
+  margin-top: -40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}

@@ -1,0 +1,156 @@
+/* component/indent-list/indent-list.wxss */
+
+.index-box {
+  position: relative;
+  background: #fff;
+  padding: 20rpx 40rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+}
+
+.float-r {
+  margin-left: 30rpx;
+  font-size: 25rpx;
+  color: #b3b3b3;
+}
+
+.float-l {
+  font-size: 35rpx;
+  font-family: PingFang-SC-Medium;
+  box-sizing: border-box;
+}
+
+.index-line {
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+}
+
+.index-text {
+  /* height: 28rpx; */
+  font-size: 26rpx;
+  color: #666;
+}
+
+.index-time {
+  float: left;
+  width: 300rpx;
+  font-size: 26rpx;
+}
+
+.index-bottom {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+
+.mg-top32 {
+  margin-top: 32rpx;
+}
+
+.mg-top20 {
+  margin-top: 20rpx;
+}
+
+.address-lt {
+  float: left;
+}
+
+.address-rts {
+  color: #398dee;
+  width: 20rpx;
+  height: 20rpx;
+  display: inline-block;
+  font-size: 20rpx;
+}
+
+/* 强制换行*/
+
+.address-rt {
+  width: 480rpx;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 2; */
+}
+
+.information {
+  background-color: #398dee;
+  color: #fff;
+  width: 160rpx;
+  font-size: 25rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+}
+
+.schedule-div {
+  float: right;
+  line-height: 28rpx;
+  position: relative;
+}
+.schedule-div::after{
+  content: "";
+  position: absolute;
+  left: -20rpx;
+  right: -20rpx;
+  top: -20rpx;
+  bottom: -20rpx;
+}
+.schedule {
+  font-size: 25rpx;
+  color: #398dee;
+  line-height: 28rpx;
+}
+
+.issue-box {
+  border-top: 1px dashed #999;
+  display: flex;
+  padding-top: 20rpx;
+}
+
+.issue-div {
+  padding-top: 10rpx;
+  display: inline-block;
+  flex: 1;
+  text-align: center;
+}
+
+.issue-text {
+  font-size: 25rpx;
+  margin: auto;
+  display: inline-block;
+}
+
+.xian {
+  width: 150rpx;
+  border: 1px solid #fff;
+  flex: 1;
+}
+
+.address {
+  width: 500rpx;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.timequantum {
+  width: 300rpx;
+  display: inline-block;
+}
+
+.icon-less:after {
+  font-family: "iconfont";
+  content: "\e6a5";
+  font-size: 40rpx;
+  color: #398dee;
+}
+
+.icon-more_unfold:after {
+  font-family: "iconfont";
+  content: "\e6a6";
+  font-size: 40rpx;
+  color: #398dee;
+}

@@ -1,0 +1,51 @@
+<view class="picture-wrapper">
+  <view class="chooseTime">
+    <view bindtap='toggoleMenu'>{{statisticsTime}}
+      <view class="icon iconfont icon-xialasanjiao"></view>
+    </view>
+    <view class="statisticsTime-menu" wx:if="{{statisticsTimeShow}}">
+      <view bindtap="changeDay">日统计</view>
+      <view bindtap="changeMouth">月统计</view>
+    </view>
+  </view>
+  <view class="bg" style='background-color:{{bgShow?"":"#eee"}};'>
+    <view wx:if="{{bgShow}}">
+      <view class="bg-border"></view>
+      <view class="bg-border"></view>
+      <view class="bg-border"></view>
+      <view class="bg-border"></view>
+    </view>
+    <view class="bg-border-last" style='margin-top:{{bgShow?0:lineHeight}}rpx'>
+        <image class="triangle" src="/common/images/三角.png" style='left:{{imageLeft}}px '></image>
+    </view>
+  </view>
+  <view class="pillar-view" style="right:{{bgShow?42:0}}rpx">
+    <scroll-view bindscroll="scroll" scroll-x upper-threshold="100" upper-threshold="100" scroll-with-animation="{{true}}" scroll-into-view="{{viewto}}" class="pillar-wrapper">
+      <view class="picture" id="to-{{index}}" bindtap="changeTouch" wx:for="{{installData}}" wx:for-item="item" wx:for-index="index" wx:key="itemName" data-idx='{{index}}'>
+        <view class="picture-bg">
+          <view class="line" wx:if="{{!bgShow&&item.Finished>=0}}"></view>
+          <view class=" " class="picture-bg-top  " style='height:{{lineHeight-lineHeight/multiple/4*item.Finished}}rpx'>
+          </view>
+          <view class="picture-height " style='height:{{lineHeight/multiple/4*item.Finished||0}}rpx'></view>
+
+        </view>
+        <view class="time">{{queryType===2?item.sDay:item.sMonth|| ""}} </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="multiple-wrapper" wx:if="{{bgShow}}">
+    <view class="indent-count">{{multiple*4}}{{unit}}</view>
+    <view class="indent-count">{{multiple*3}}{{unit}}</view>
+    <view class="indent-count">{{multiple*2}}{{unit}}</view>
+    <view class="indent-count">{{multiple*1}}{{unit}}</view>
+  </view>
+  <view class="active-wrapper" style='left:{{left}}px'>
+    <view class="active-content">
+      <view class="line" wx:if="{{!bgShow}}"></view>
+      <view class=" " class="active-top  " style='height:{{lineHeight-lineHeight/multiple/4*installData[touchIndex].Finished}}rpx'></view>
+      <view class="active-height "animation="{{animationData}}" style='height:{{lineHeight/multiple/4*installData[touchIndex].Finished}}rpx' ></view>
+    </view>
+    <view class=" time word-bg">{{queryType===2?installData[touchIndex].sDay:installData[touchIndex].sMonth|| ""}}</view>
+  </view>
+
+</view>

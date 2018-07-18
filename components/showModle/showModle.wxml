@@ -1,0 +1,11 @@
+<!--验证弹窗  -->
+<view  class="model" wx:if="{{modelShow}}">
+   <view class="masking"></view> 
+  <view class="content">
+    <view  class="title"><text class="title-item">{{title}}</text><icon bindtap="hiddenReminder" class="title-item-icon" type="cancel"></icon></view>
+    <slot name="content"></slot>
+    <view class="close-reminder" bindtap='comfirePlay'  >
+      <button>确认支付 <text wx:if="totole">￥{{totole}}</text> </button>
+    </view>
+  </view>
+</view>

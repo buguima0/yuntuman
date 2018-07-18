@@ -1,0 +1,62 @@
+@import "./icons.wxss";
+.top{
+    background: white;
+    padding: 20rpx;
+}
+.progress-wrapper {
+  font-size: 20rpx;
+  display: flex;
+  padding: 40rpx 10rpx 10rpx 10;
+  box-sizing: border-box;
+  margin-top:10rpx;
+}
+
+.progress-wrapper .icon-xian {
+  display: block;
+   width: 50rpx;
+  height: 30rpx; 
+  margin: 0 auto;
+  border-bottom: 1px solid #398dee;
+}
+
+.progress-wrapper .item-wrapper {
+  display: inline-block;
+  width: 120rpx;
+  text-align: center;
+}
+
+.progress-wrapper .icon-wrapper {
+  font-size: 24rpx;
+  width: 100%;
+  text-align: center;
+  color: #398dee;
+}
+.icon-wrapper .icon {
+  font-size:20px;
+}
+.progress-wrapper .time {
+  font-size: 22rpx;
+  margin-top:16rpx;
+  white-space: nowrap;
+  color: #999;
+}
+
+.progress-wrapper .img {
+  display: inline-block;
+  width: 80rpx;
+  margin-top: 20rpx;
+  vertical-align: top;
+}
+
+.wrapper {
+  background: white;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+}
+.border-solid{
+  border-top:1rpx solid #333;
+}
+.border-dashed{
+  border-top:1rpx dashed black;
+}

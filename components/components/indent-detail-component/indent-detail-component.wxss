@@ -1,0 +1,74 @@
+
+.index-box{
+  position: relative;
+  background: #fff;
+  margin-bottom:20rpx;
+  font-size: 26rpx;
+  line-height: 52rpx;
+  padding: 0 40rpx;
+  border-radius: 10rpx;
+}
+.information{
+  border-bottom:1px solid #e6e6e6;
+  margin-bottom: 13rpx;
+  font-weight: bold;
+  font-size:30rpx;
+  line-height: 72rpx;
+  color:#333;
+}
+.information-textL{
+   flex:1;
+}
+.information-label{
+margin-right: 17rpx;
+flex: 0 0 200rpx;
+}
+.information-textr{
+   flex:3;
+}
+/* 强制换行，并指点换行数，超出部分省略号 */
+.address-rt {
+  width:480rpx; 
+  word-wrap:break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /* -webkit-line-clamp: 2; */
+}
+
+.xian{
+  width: 100%;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-top: 20rpx;
+}
+.packup{
+  text-align: center;
+  color:#398dee;
+  font-size:26rpx;
+}
+.packup .icon {
+  color: #398dee;
+  font-size: 26rpx;
+}
+.equipment-textr{
+   text-align: right;
+}
+.btn-area{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+.btn-area button{
+  background: #398dee;
+  color:#fff;
+  border-radius: 0rpx;
+}
+.information-color{
+  color: #999;
+  display: flex;
+  font-size:28rpx;
+}
+.icon{
+  display: inline-block;
+}

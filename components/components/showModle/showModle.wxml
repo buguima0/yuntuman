@@ -1,0 +1,11 @@
+<!--验证弹窗  -->
+<view  class="model" wx:if="{{modelShow}}">
+   <view class="masking"></view> 
+  <view class="content">
+    <view  class="title">{{title}}</view>
+    <slot name="content"></slot>
+    <view class="close-reminder" bindtap="hiddenReminder" >
+      确定
+    </view>
+  </view>
+</view>

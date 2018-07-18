@@ -1,0 +1,14 @@
+<!--components/addPhoto/addPhoto.wxml-->
+<view class="photo-wrapper">
+  <view class="photo-title">
+    <icon wx:if="{{hasTitleIcon}}" class="title-icon iconfont icon-wujiaoxing"></icon>{{title}}</view>
+  <view class="certificate-wrapper">
+    <view class="photo-item" wx:for="{{photos}}" wx:key="{{item}}" bindtap='upPhoto' data-data="{{item}}">
+      <image wx:if="{{item.image||'/common/images/placeholder.png'}}" src="{{item.image}}" data-data="{{item}}"></image>
+      <view class="photo-none" wx:if="{{!item.image}}" data-data="{{item}}">
+        <view class="iconfont icon-tianjia1 icon-add" data-data="{{item}}"></view>
+        <text class="text-color" data-data="{{item}}">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

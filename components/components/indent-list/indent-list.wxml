@@ -1,0 +1,42 @@
+<!--遍历工单数据  -->
+<view class="index-box" wx:for="{{indents}}" data-idx="{{index}}" bindtap='detailShow' wx:for-item="item" wx:for-index="index" wx:key="itemName">
+  <view >
+    <view class='index-line'>
+      <text class='float-l'>{{item.UserName}}</text>
+      <view>        
+        <button class='information' data-idx="{{index}}" catchtap="entering" wx:if="{{item.Status===1}}">待安装</button>
+        <button class='information' data-idx="{{index}}" catchtap='entering' wx:if="{{item.Status===2}}">安装中</button>
+        <button class='information' data-idx="{{index}}" catchtap='entering' wx:if="{{item.Status===3}}">详细</button>
+      </view>
+    </view>
+    <view class='index-text mg-top32'>
+      <text>预约安装时间：</text>
+      <text>{{item.SetupTime}}</text>
+    </view>
+    <view class='index-text mg-top32'>
+      <text>联系电话：</text>
+      <text>{{item.SetupTel}}</text>
+    </view>
+    <view class='mg-top20 index-text'>
+      <text>安装地址：</text>
+      <text>{{item.SetupAddress}}</text>
+    </view>
+    <view class='index-text mg-top32'>
+      <text>设备类型：</text>
+      <text>{{item.TerType==1?"有线":"无线"}}</text>
+    </view>
+    <!-- <view class='mg-top20 index-bottom index-text clearfix'>
+     <view  wx:if="{{!isFinished}}" class="index-time">{{item.SetupTime}}</view>
+      <view wx:if="{{isFinished}}" class="index-time">{{item.finishedTime}}</view>
+      <view  catchtap='showProgress' data-idx="{{index}}" class='schedule-div'>
+        <view class='schedule' data-idx="{{index}}">进度
+          <view class="iconfont {{item.toggle?'up':'down'}} address-rts" data-idx="{{index}}" ></view>
+        </view>
+      </view>
+    </view> -->
+  </view>
+  <!--进度详情  -->
+  <!-- <view class="issue-box" wx:if="{{item.toggle}}">
+    <progress-detail solid="{{false}}" currentIndent="{{item}}" style="width:100%;"></progress-detail>
+  </view> -->
+</view>

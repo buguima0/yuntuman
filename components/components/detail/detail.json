@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "indent-detail-component": "/components/indent-detail-component/indent-detail-component",
+    "progress-detail": "/components/progress-detail/progress-detail"
+  }
+}

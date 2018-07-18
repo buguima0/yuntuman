@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "progress-detail": "/components/progress-detail/progress-detail"
+  }
+}

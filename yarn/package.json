@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "unset-value": "^1.0.0",
+    "webpack": "^4.12.1"
+  }
+}

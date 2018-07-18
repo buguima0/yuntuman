@@ -1,0 +1,70 @@
+<view class="index-box">
+  <view class="information">{{userInfo.UserName||"工单信息"}}</view>
+  <view class='information-color'>
+    <view class="information-label">工单号：</view>
+    {{currentIndent.OrderNo}}
+  </view>
+  <view class='information-color' wx:if="{{!isToggle}}">
+    <view class="information-label">安装状态：</view>
+    {{StatusString[currentIndent.Status]}}
+  </view>
+  <view class='information-color'>
+    <view class="information-label">所属机构：</view>
+    {{currentIndent.AgentName}}
+  </view>
+  <!-- <view class='information-color'>
+    <view class="information-label">联系人：</view>
+    <text class="address-rt">{{currentIndent.DistrictStr}}</text>
+  </view> -->
+  <view class='information-color'>
+    <view class="information-label">联系人：</view>
+    {{currentIndent.LinkMan}}
+  </view>
+  <view class='information-color'>
+    <view class="information-label">联系人电话：</view>
+    {{currentIndent.LinkTel}}
+  </view>
+
+  <view hidden='{{!isShow}}'>
+    <view class='information-color' wx:if="{{!isToggle}}">
+      <view class="information-label">设备类型：</view>
+      {{TerTypes[currentIndent.TerType]}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">车牌：</view>
+      {{currentIndent.PlateNo||''}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">车型：</view>
+      {{currentIndent.CarType||''}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">车架号：</view>
+      {{currentIndent.VIN}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">安装地区：</view>
+      {{currentIndent.MergerName}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">安装地址：</view>
+      {{currentIndent.SetupAddress}}
+    </view>
+    <view class='information-color'>
+      <view class="information-label">预约安装时间：</view>
+      {{currentIndent.SetupTime}}
+    </view>
+    <view class='information-color' wx:if="{{!isToggle}}">
+      <view class="information-label">安装完成时间：</view>
+      {{currentIndent.CompleteTime||"--"}}
+    </view>
+  </view>
+  <view wx:if="{{isToggle}}">
+    <view class="packup" wx:if="{{!isShow}}" bindtap='toggleShow'>
+      <view class=" icon iconfont towdown"></view>
+    </view>
+    <view class="packup" wx:if="{{isShow}}" bindtap='toggleShow'>
+      <view class=" icon iconfont towup"></view>
+    </view>
+  </view>
+</view>
