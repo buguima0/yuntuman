@@ -1,7 +1,15 @@
 <!--components/list/list.wxml-->
 <view class="content">
-  <view wx:for="{{tabs}}" wx:for-index="index" wx:key="{{item}}" data-item="{{item}}" wx:hidden="{{item.hidden}}" style='{{textLineHeight}}rpx;'>
-    <view class="content-item" style="padding-left:{{hasIcon?0:30}}rpx" bindtap='chooseTab' data-item="{{item}}">
+  <view wx:for="{{tabs}}" wx:for-index="index" wx:key="{{item}}" data-item="{{item}}" wx:hidden="{{item.hidden}}" >
+    <view class="content-item" style="height:{{textLineHeight}}rpx;padding-left:{{hasIcon?0:30}}rpx" bindtap='chooseTab' data-item="{{item}}">
+      <!-- 单选框 -->
+      <view class="radio-wrapper" wx:if="{{item.radio}}" data-item="{{item}}">
+        <radio-group class="radio-group" catchchange="radioChange" data-item="{{item}}">
+          <label class="radio" wx:for="{{item.radio}}" wx:key="{{item}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
       <!--图标  -->
       <view class="icon-wrapper" wx:if="{{hasIcon}}">
         <view wx:if="{{item.icon}}" class="iconfont {{item.icon}}" style="color:{{item.iconColor||'#000'}};" data-item="{{item}}"></view>
@@ -9,33 +17,33 @@
       </view>
       <view class="title-wrapper" style="padding:{{item.describes?'10 0':0}}rpx;">
         <!--title  -->
-        <view data-item="{{item}}" class='title' wx:if="{{item.title}}" style="line-height:{{textLineHeight}}rpx;padding-left:{{hasIcon?30:0}}rpx;font-size:{{fontSize}}rpx">{{item.title}}</view>
+        <view data-item="{{item}}" class='title' wx:if="{{item.title}}" style="line-height:{{item.lineHeight||textLineHeight}}rpx;padding-left:{{hasIcon?30:0}}rpx;font-size:{{fontSize}}rpx">{{item.title}}</view>
         <!--描述  -->
         <view wx:if="{{item.describes}}" class="describe-wrapper" data-item="{{item}}">
-          <view data-item="{{item}}" class="describes" wx:for="{{item.describes}}" wx:for-item="describe" style="line-height:{{textLineHeight}}rpx;color:{{desColor||'#b2b2b2'}}" wx:key="{{item}}" data-item="{{item}}">
-            <text data-item="{{item}}">  {{describe.title}}</text>
-            <text data-item="{{item}}">  {{describe.content}}</text>
+          <view data-item="{{item}}" class="describes" wx:for="{{item.describes}}" wx:for-item="describe" style="line-height:{{item.lineHeight||textLineHeight}}rpx;color:{{desColor||'#b2b2b2'}}" wx:key="{{item}}" data-item="{{item}}">
+            <text data-item="{{item}}" wx:if="{{describe.title}}" style="font-size:{{describe.fontSize||32}}rpx">  {{describe.title}}</text>
+            <text data-item="{{item}}"wx:if="{{describe.content}}"style="font-size:{{describe.fontSize||32}}rpx">  {{describe.content}}</text>
           </view>
         </view>
         <!--右边箭头  -->
-        <view wx:if="{{hasAngleRight}}" class="item-icon iconfont icon-youjiantou" data-item="{{item}}"></view>
+        <view wx:if="{{hasAngleRight}}" class="item-icon iconfont icon-youjiantou" style='line-height:{{textLineHeight}}rpx' data-item="{{item}}"></view>
       </view>
       <!--编辑按钮  -->
       <view class='editor-wrapper' wx:if="{{item.editor}}" data-item="{{item}}">
-        <text  data-title="eidtorBtn" >编辑</text>
+        <text data-title="eidtorBtn">编辑</text>
         <text data-item="{{item}}">|</text>
-        <text  data-title="cancleBtn">删除</text>
+        <text data-title="cancleBtn">删除</text>
       </view>
-      <view wx:if="{{item.toDetail}}" class='toDetail'   data-item="{{item}}">
-      <view class=" authentication"  data-item="{{item}}">已认证</view>
-       <view class="seeit"   data-title="seeBtn">查看</view> 
+      <view wx:if="{{item.toDetail}}" class='toDetail' data-item="{{item}}">
+        <view class=" authentication" data-item="{{item}}"wx:if="{{item.finishContent}}">{{item.finishContent}}</view>
+        <view class="seeit" data-title="seeBtn">查看</view>
       </view>
-      <view wx:if="{{!alginRight}}"  data-item="{{item}}">
-        <view wx:if="{{!stateIcon}}"  data-item="{{item}}" class=" {{stateLeft?'stateleft':'state'}}" style='color:{{stateColor}};line-height:{{textLineHeight}}rpx;font-size:{{fontSize}}rpx'>{{item.state}}</view>
+      <view wx:if="{{!alginRight}}" data-item="{{item}}">
+        <view wx:if="{{!stateIcon}}" data-item="{{item}}" class=" {{stateLeft?'stateleft':'state'}}" style='color:{{stateColor}};line-height:{{textLineHeight}}rpx;font-size:{{fontSize}}rpx'>{{item.state}}</view>
       </view>
-      <view wx:if="{{alginRight}}"  data-item="{{item}}">
-        <view wx:if="{{!item.stateIcon}}" data-item="{{item}}"class=" {{stateLeft?'stateleft':'stateright'}}" style='color:{{stateColor}};line-height:{{textLineHeight}}rpx;font-size:{{fontSize}}rpx'>{{item.state}}</view>
-        <image wx:if="{{item.stateIcon}}" data-item="{{item}}"  class="stateIcon stateright" src='{{item.stateIcon||"/common/images/headIcon.png"}}'></image>
+      <view wx:if="{{alginRight}}" data-item="{{item}}">
+        <view wx:if="{{!item.stateIcon}}" data-item="{{item}}" class=" {{stateLeft?'stateleft':'stateright'}}" style='color:{{stateColor}};line-height:{{textLineHeight}}rpx;font-size:{{fontSize}}rpx'>{{item.state}}</view>
+        <image wx:if="{{item.stateIcon}}" data-item="{{item}}" class="stateIcon stateright" src='{{item.stateIcon||"/common/images/headIcon.png"}}'></image>
       </view>
     </view>
   </view>

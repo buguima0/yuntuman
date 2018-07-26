@@ -13,7 +13,9 @@
 //   }]
 //   eidtor?:false         右边是否有编辑删除按钮
 // toDetail?: false        右边是否显示详情按钮
-
+    // radio?:[{
+    //   checked:false          //单选框
+    // }]
 // state：''                描述值 前后显示的内容
 // stateIcon ：''               右边的图标地址
 // ]

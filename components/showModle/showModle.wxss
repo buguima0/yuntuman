@@ -1,4 +1,7 @@
+@import "./icon.wxss";
+
 /*弹窗  */
+
 .model {
   position: fixed;
   top: 0;
@@ -16,37 +19,46 @@
 
 .content {
   position: fixed;
- bottom: 100rpx;
- left: 0;
+  bottom: 0rpx;
+  left: 0;
   z-index: 5;
-  background: white;
   width: 100%;
-  border-radius: 10rpx;
+  /* border-radius: 10rpx; */
   font-size: 28rpx;
   box-sizing: border-box;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .content .title {
   font-size: 30rpx;
- display: flex;
+  display: flex;
   line-height: 80rpx;
+  padding: 0 30rpx;
+  background: #fff;
 }
-.title-item{
+
+.title-item {
   flex: 1;
   text-align: left;
 }
-.title-item-icon{
-  flex:1;
+
+.title-item-icon {
+  flex: 1;
   text-align: right;
 }
+
 .close-reminder {
   box-sizing: border-box;
-  color: green;
+  color: #fff;
   z-index: 10;
   width: 100%;
   text-align: center;
-  height:80rpx;
-  border-top:1rpx solid #ccc;
-  line-height: 80rpx
+  height:100rpx;
+  line-height: 100rpx;
+  background: #009fe8;
+  margin-top:30rpx;
+}
+.close-reminder button{
+  background: #009fe8;
+  color: #fff;
 }

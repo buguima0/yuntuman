@@ -10,6 +10,7 @@
   margin-top: 20rpx;
   box-sizing: border-box;
   padding: 0 30rpx;
+  align-items: center;
 }
 
 .item-icon {
@@ -24,11 +25,23 @@
   text-align: center;
 }
 
+.radio-wrapper {
+  flex: 0 0 40rpx;
+  height: 100%;
+  margin-left:10rpx;
+}
+
+.radio {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.8);
+}
+
 .img {
   vertical-align: middle;
   width: 140rpx;
   height: 140rpx;
-  padding: 30rpx;
+  padding:10rpx 10rpx 10rpx 10rpx;
   box-sizing: border-box;
 }
 
@@ -68,7 +81,8 @@
   height: 100%;
   z-index: 2;
 }
-.authentication{
+
+.authentication {
   flex: 0 0 40rpx;
   line-height: 40rpx;
   width: 110rpx;
@@ -77,13 +91,16 @@
   border-radius: 10rpx;
   color: #b2b2b2;
 }
+
 .describes {
   font-size: 26rpx;
-  padding: 0 30rpx;
+  padding: 0 30rpx 0 0;
 }
-.seeit{
+
+.seeit {
   line-height: 80rpx;
 }
+
 .car-bottom {
   background: #fff;
   width: 100%;

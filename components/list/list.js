@@ -66,6 +66,10 @@ Component({
          const data = e.target.dataset.item
          this.triggerEvent("chooseTab", { data }, { bubbles: false, composed: false })
       } 
+    },
+    radioChange(e){
+      const data = e.target.dataset.item
+      this.triggerEvent("radioChange", { data }, { bubbles: false, composed: false })
     }
   }
 })

@@ -10,12 +10,17 @@ Component({
     title:{
       type:String,
       value:'提示'
+
     },
     modelShow:{
       type:Boolean,
       value:false
     },
-    totole:{
+    total:{
+      type:String,
+      value:''
+    },
+    btnTitle:{
       type:String,
       value:''
     }

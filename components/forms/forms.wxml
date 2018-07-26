@@ -31,7 +31,7 @@
 
       <view class="content-item-key" data-data="{{item}}">{{item.title}}</view>
       <view class="content-item-value " data-data="{{item}}" bindtap='upPhoto'>
-        <image class="icon-image" data-data="{{item}}" src="{{item.image}}"></image>
+        <image class="icon-image" data-data="{{item}}" src="{{item.image||'/common/images/placeholder.png'}}"></image>
       </view>
     </view>
     <!--省市选择器  -->
@@ -47,11 +47,25 @@
         </picker>
       </view>
     </view>
+    <!--自定义省市选择器  -->
+    <view class="content-item" wx:if="{{item.formType=='selfDataRegion'}}" data-data="{{item}}">
+      <icon wx:if="{{hasTitleIcon}}" class="title-icon iconfont icon-wujiaoxing" data-data="{{item}}"></icon>
+      <view class="content-item-key" data-data="{{item}}">{{item.title}}</view>
+      <view class="content-item-value picker-wrapper" data-data="{{item}}">
+        <view class="self-region" data-data="{{item}}">
+        {{regionString}}
+          <region class="region" bindregionChange="selfRegionChange" data-data="{{item}}"></region>
+          
+          <icon class='iconfont icon-youjiantou icon-right' data-data="{{item}}"></icon>
+        </view>
+      </view>
+    </view>
     <!--输入框  -->
     <view class="content-item" wx:if="{{item.formType=='input'}}" data-data="{{item}}">
       <icon wx:if="{{hasTitleIcon}}" class="title-icon iconfont icon-wujiaoxing" data-data="{{item}}"></icon>
       <view class="content-item-key" data-data="{{item}}">{{item.title}}</view>
-      <input class="content-item-value input" name="{{item.name}}" placeholder="{{item.placeholder}}" type='{{inputType}}' bindblur='inputChange' confirm-type='next' value='{{item.value}}' data-data="{{item}}"></input>
+      <input class="content-item-value input" disabled='{{item.disabled}}' name="{{item.name}}" placeholder="{{item.placeholder}}" type='{{inputType}}' bindblur='inputChange' confirm-type='next' value='{{item.value}}' data-data="{{item}}"></input>
+
     </view>
     <!--单选  -->
     <view class="content-item" wx:if="{{item.formType=='radio'}}" data-data="{{item}}">
@@ -63,12 +77,16 @@
         </label>
       </radio-group>
     </view>
+    <!--开关  -->
     <view class="content-item" wx:if="{{item.formType=='switch'}}" data-data="{{item}}">
       <icon wx:if="{{hasTitleIcon}}" class="title-icon iconfont icon-wujiaoxing" data-data="{{item}}"></icon>
       <view class="content-item-key switch-key" data-data="{{item}}">{{item.title}}</view>
       <view class="switch-wrapper">
         <switch class="switch" checked="{{item.value}}" bindchange="switchChange" data-data="{{item}}" />
       </view>
+    </view>
+    <view class="content-item" wx:if="{{item.formType=='textarea'}}" data-data="{{item}}">
+      <textarea placeholder="{{item.placeholder}}" placeholder-style="{{item.textareaColor}}" />
     </view>
     <!--日期选择器  -->
     <view class="content-item" wx:if="{{item.formType=='datePicker'}}" data-data="{{item}}">

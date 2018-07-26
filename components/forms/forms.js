@@ -1,4 +1,5 @@
 // components/forms/forms.js
+
 Component({
   /**
    * 组件的属性列表
@@ -24,8 +25,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    regionString:''
   },
+  
 
   /**
    * 组件的方法列表
@@ -85,6 +87,14 @@ Component({
         item: e.target.dataset.data
       }
       this.triggerEvent("imageChange", { data }, { bubbles: false, composed: false })
-    }
+    },
+    selfRegionChange(e){
+     const data =e.detail
+     data.item = e.currentTarget.dataset.data
+     this.setData({
+       regionString: data.value[0] + data.value[1] + data.value[2] 
+     })
+     this.triggerEvent("selfRegionChange", data , { bubbles: false, composed: false })
+    },
   }
 })

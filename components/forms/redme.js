@@ -3,7 +3,7 @@
 // forms: [
 
 //   {
-//     formType: 'picker（普通表单）' | 'input（普通输入框）' | 'radio（单选)' | 'switch（开关按钮）' | 'pickerRegion（省市区选择器）' | 'headIcon（头像选）' |'datePicker（日期选择器）',
+//     formType: 'picker（普通表单）' | 'input（普通输入框）' | 'radio（单选)' | 'switch（开关按钮）' | 'pickerRegion（省市区选择器）' | 'headIcon（头像选）' |'datePicker（日期选择器）'|'selfDataRegion'（自定义省市）,
 //     title: '标题一',  标题的值
 //     types: ['a', 'b', 'c'], 普通选择器的值
 //     value: '',      表单的值
